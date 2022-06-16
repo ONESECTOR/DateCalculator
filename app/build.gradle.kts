@@ -68,4 +68,9 @@ dependencies {
     implementation("com.github.moxy-community:moxy-material:$moxyVersion")
     implementation("com.github.moxy-community:moxy-ktx:$moxyVersion")
     kapt("com.github.moxy-community:moxy-compiler:$moxyVersion")
+
+    // Hilt
+    val hilt = "2.37"
+    implementation("com.google.dagger:hilt-android:$hilt")
+    kapt("com.google.dagger:hilt-compiler:$hilt")
 }
