@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "DateCalculator"
-include ':app'
+include(":app")
