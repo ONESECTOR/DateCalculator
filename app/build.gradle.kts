@@ -3,6 +3,7 @@ plugins {
     kotlin("android")
     kotlin("kapt")
 
+    id("dagger.hilt.android.plugin")
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
 }
@@ -70,7 +71,7 @@ dependencies {
     kapt("com.github.moxy-community:moxy-compiler:$moxyVersion")
 
     // Hilt
-    val hilt = "2.37"
+    val hilt = "2.39.1"
     implementation("com.google.dagger:hilt-android:$hilt")
     kapt("com.google.dagger:hilt-compiler:$hilt")
 }
