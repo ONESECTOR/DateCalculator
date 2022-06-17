@@ -4,15 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.DatePicker
 import com.sector.datecalculator.databinding.FragmentRootBinding
 import com.sector.datecalculator.presentation.presenter.root.RootPresenter
 import com.sector.datecalculator.presentation.view.root.RootView
 import com.sector.datecalculator.ui.common.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import moxy.ktx.moxyPresenter
-import java.sql.Date
-import java.util.*
 import javax.inject.Inject
 import javax.inject.Provider
 
@@ -23,8 +20,6 @@ class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
     lateinit var presenterProvider: Provider<RootPresenter>
 
     private val rootPresenter: RootPresenter by moxyPresenter { presenterProvider.get() }
-
-    //var calendars: List<DatePicker> = listOf()
 
     override fun onViewBinding(
         inflater: LayoutInflater,

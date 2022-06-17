@@ -1,6 +1,5 @@
 package com.sector.datecalculator.presentation.presenter.root
 
-import android.util.Log
 import com.sector.datecalculator.presentation.presenter.BaseMvpPresenter
 import com.sector.datecalculator.presentation.view.root.RootView
 import moxy.InjectViewState
@@ -32,7 +31,5 @@ constructor() : BaseMvpPresenter<RootView>() {
     fun calculateDate() {
         val difference = abs(firstDate!!.time - secondDate!!.time)
         val days = difference / (24 * 60 * 60 * 1000)
-
-        Log.d("days", days.toString())
     }
 }
