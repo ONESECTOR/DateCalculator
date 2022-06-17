@@ -74,4 +74,8 @@ dependencies {
     val hilt = "2.39.1"
     implementation("com.google.dagger:hilt-android:$hilt")
     kapt("com.google.dagger:hilt-compiler:$hilt")
+
+    // Joda time
+    val joda = "2.10.14"
+    implementation("net.danlew:android.joda:$joda")
 }
