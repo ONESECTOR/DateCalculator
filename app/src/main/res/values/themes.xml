@@ -1,9 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
     <style name="Base.Theme.DateCalculator" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/transparent</item>
     </style>
 
     <style name="Theme.DateCalculator" parent="Base.Theme.DateCalculator" />
+
+    <style name="Theme.DateCalculator.Launcher" parent="Theme.DateCalculator">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
 </resources>
