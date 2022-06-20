@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.sector.datecalculator.databinding.FragmentRootBinding
+import com.sector.datecalculator.extensions.addSystemTopPadding
 import com.sector.datecalculator.presentation.presenter.root.RootPresenter
 import com.sector.datecalculator.presentation.view.root.RootView
 import com.sector.datecalculator.ui.common.BaseFragment
@@ -34,6 +35,8 @@ class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
+            root.addSystemTopPadding()
+
             btnCalculate.setOnClickListener {
                 listOf(
                     firstDate,
@@ -49,6 +52,12 @@ class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
                     rootPresenter.calculateDate()
                 }
             }
+        }
+    }
+
+    override fun printResult(result: String) {
+        binding?.apply {
+            tvResult.text = result
         }
     }
 }

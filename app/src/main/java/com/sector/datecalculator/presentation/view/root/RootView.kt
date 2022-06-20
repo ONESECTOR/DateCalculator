@@ -6,6 +6,6 @@ import moxy.viewstate.strategy.alias.AddToEndSingle
 @AddToEndSingle
 interface RootView: BaseMvpView {
 
-    
+    fun printResult(result: String)
 
 }

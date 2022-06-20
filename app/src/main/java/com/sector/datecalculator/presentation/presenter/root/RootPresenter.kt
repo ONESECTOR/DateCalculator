@@ -1,7 +1,9 @@
 package com.sector.datecalculator.presentation.presenter.root
 
+import com.sector.datecalculator.extensions.withMain
 import com.sector.datecalculator.presentation.presenter.BaseMvpPresenter
 import com.sector.datecalculator.presentation.view.root.RootView
+import kotlinx.coroutines.launch
 import moxy.InjectViewState
 import java.text.SimpleDateFormat
 import java.util.*
@@ -29,7 +31,14 @@ constructor() : BaseMvpPresenter<RootView>() {
     }
 
     fun calculateDate() {
-        val difference = abs(firstDate!!.time - secondDate!!.time)
-        val days = difference / (24 * 60 * 60 * 1000)
+        scope.launch {
+            val difference = abs(firstDate!!.time - secondDate!!.time)
+            val days = difference / (24 * 60 * 60 * 1000)
+            val result = days.toString()
+
+            withMain {
+                viewState.printResult(result)
+            }
+        }
     }
 }

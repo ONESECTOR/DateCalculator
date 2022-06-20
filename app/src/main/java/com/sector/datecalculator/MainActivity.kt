@@ -19,11 +19,8 @@ class MainActivity : BaseActivity(R.layout.activity_main), MainView {
     private val presenter: MainPresenter by moxyPresenter { mainPresenter.get() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        setTheme(R.style.Theme_DateCalculator)
         super.onCreate(savedInstanceState)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
+        WindowCompat.setDecorFitsSystemWindows(window, false)
     }
 }

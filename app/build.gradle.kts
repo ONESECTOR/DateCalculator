@@ -59,8 +59,8 @@ dependencies {
     // Coroutines
     val coroutinesVersion = "1.6.2"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactive:$coroutinesVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
 
     // Moxy
     val moxyVersion = "2.2.2"
@@ -74,8 +74,4 @@ dependencies {
     val hilt = "2.39.1"
     implementation("com.google.dagger:hilt-android:$hilt")
     kapt("com.google.dagger:hilt-compiler:$hilt")
-
-    // Joda time
-    val joda = "2.10.14"
-    implementation("net.danlew:android.joda:$joda")
 }
